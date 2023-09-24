@@ -4,12 +4,12 @@ import zipfile
 import os
 import shutil
 
-TOKEN = os.environ.get('bot_token')
-SUBFINDER_COMMAND = os.environ.get('subfinder_command')
-HTTPX_COMMAND = os.environ.get('httpx_command')
-AQUATONE_COMMAND = os.environ.get('aquatone_command')
-SUBFINDER_WEBHOOK_URL = os.environ.get('subfinder_webhook')
-AQUATONE_WEBHOOK_URL = os.environ.get('aquatone_webhook')
+TOKEN = os.getenv('bot_token')
+SUBFINDER_COMMAND = os.getenv('subfinder_command')
+HTTPX_COMMAND = os.getenv('httpx_command')
+AQUATONE_COMMAND = os.getenv('aquatone_command')
+SUBFINDER_WEBHOOK_URL = os.getenv('subfinder_webhook')
+AQUATONE_WEBHOOK_URL = os.getenv('aquatone_webhook')
 
 intents = discord.Intents.default()
 intents.message_content = True
